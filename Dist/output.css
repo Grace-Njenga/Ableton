@@ -1,4 +1,5 @@
 /*! tailwindcss v4.1.6 | MIT License | https://tailwindcss.com */
+@layer properties;
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -26,6 +27,10 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+ion-icon {
+  font-size: 1em;
+}
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -33,10 +38,17 @@ p, h1, h2, h3, h4, h5, h6 {
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-black: #000;
     --color-white: #fff;
+    --spacing: 0.25rem;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-background: #f3f3f3;
+    --font-default: "Roboto", sans-serif;
   }
 }
 @layer base {
@@ -185,20 +197,48 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 @layer utilities {
-  .visible {
-    visibility: visible;
+  .relative {
+    position: relative;
+  }
+  .z-35 {
+    z-index: 35;
+  }
+  .mt-\[1rem\] {
+    margin-top: 1rem;
   }
   .contents {
     display: contents;
   }
+  .hidden {
+    display: none;
+  }
+  .table {
+    display: table;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
-  .rotate-180 {
-    rotate: 180deg;
+  .w-\[100vw\] {
+    width: 100vw;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .resize {
     resize: both;
+  }
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .bg-background {
     background-color: var(--color-background);
@@ -206,5 +246,112 @@ p, h1, h2, h3, h4, h5, h6 {
   .bg-white {
     background-color: var(--color-white);
   }
+  .font-default {
+    font-family: var(--font-default);
+  }
+  .leading-1 {
+    --tw-leading: calc(var(--spacing) * 1);
+    line-height: calc(var(--spacing) * 1);
+  }
+  .leading-1\.5 {
+    --tw-leading: calc(var(--spacing) * 1.5);
+    line-height: calc(var(--spacing) * 1.5);
+  }
+  .font-\[1\.25rem\] {
+    --tw-font-weight: 1.25rem;
+    font-weight: 1.25rem;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+  .text-black {
+    color: var(--color-black);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .transition-transform {
+    transition-property: transform, translate, scale, rotate;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
+  .lg\:hidden {
+    @media (width >= 64rem) {
+      display: none;
+    }
+  }
 }
-@layer base;
+#menu-toggle:checked + label .menu-icon {
+  transform: rotate(180deg);
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-border-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-outline-style: solid;
+      --tw-duration: initial;
+    }
+  }
+}

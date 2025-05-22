@@ -65,19 +65,15 @@ h6 {
 #__next {
     isolation: isolate;
 }
+ion-icon{
+    font-size: 1em
+}
 
+/* FONTS  */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* TAILWIND */
-
 @import "tailwindcss";
 
-@layer base {
-    /* @font-face {
-    font-family: ;
-    src: url();
-
-    futura-pt, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif
-  } */
-}
 @theme {
     --color-lemonade: #fbffa7;
     --color-rojo: #ff764d;
@@ -86,5 +82,12 @@ h6 {
     --color-verde: #b6ffc0;
     --color-purpleish: #d5b3ff;
     --color-background: #f3f3f3;
+
+    /* FONT  */
+    --font-default: "Roboto", sans-serif;
+    --font-secondary: "PT Serif", serif;
 }
 
+#menu-toggle:checked + label .menu-icon {
+    transform: rotate(180deg);
+}

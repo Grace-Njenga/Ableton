@@ -18,9 +18,32 @@
 
         <title>Ableton</title>
     </head>
-    <body class="min-h-screen bg-background">
+    <body
+        class="min-h-screen bg-background font-default text-black leading-1.5 font-normal overflow-x-hidden w-[100vw]"
+    >
         <!-- HEADER -->
-        
+        <header class="mt-[1rem] font-[1.25rem]">
+            <nav class="z-35 relative">
+                <!-- LOGO -->
+                <ion-icon
+                    name="accessibility-outline"
+                    class="cursor-pointer font-bold"
+                ></ion-icon>
+
+                <!-- MENU ICON  -->
+                <span
+                    id="menu-toggle"
+                    class="menu font-bold lg:hidden"
+                    aria-controls="icon-menu"
+                    aria-expanded="false"
+                    >Menu
+                    <ion-icon
+                        name="caret-down-outline"
+                        class="menu-icon transition-transform duration-300"
+                    ></ion-icon
+                ></span>
+            </nav>
+        </header>
 
         <!-- MAIN BODY  -->
         <main class="">
