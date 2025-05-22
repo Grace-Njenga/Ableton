@@ -1,0 +1,81 @@
+@media (max-width: 767px) and (min-width: 200px) {
+    body {
+        width: 90%;
+    }
+
+    /* HEADER CSS  */
+
+    header {
+        /* width: 100%; */
+        display: block;
+        overflow: visible;
+        /* z-index: 40; */
+        padding: 2rem 0;
+        position: relative;
+        /* background-color: blueviolet; */
+    }
+    nav{
+      padding: .5rem;
+      background-color: aqua;
+    }
+    .nav {
+        position: fixed !important;
+        padding-inline: 2rem;
+        inset: 0;
+        flex-direction: column;
+        z-index: 100;
+        transform: translateY(-250%);
+        transition: all 500ms ease-out;
+        background-color: #0000ff;
+        padding-top: 4.375rem;
+    }
+    .nav[data-visible="true"] {
+        transform: translateY(0);
+        /* color: white; */
+    }
+    .menu {
+        display: block;
+        background-color: aquamarine;
+        z-index: 999;
+        /* position: absolute;
+        top: -90%;
+        aspect-ratio: 999;
+        left: 4rem;
+        z-index: 999;
+        padding-left: 2rem; */
+    }
+
+    li {
+        padding: 0.5rem 0;
+    }
+
+    .logo {
+        position: relative;
+        top: -10%;
+        /* top: -90%; */
+        z-index: 999;
+        text-decoration: solid;
+        font-weight: 700;
+    }
+    .special {
+        display: grid;
+        position: relative;
+        grid-template-rows: 2;
+        /* right: 0; */
+    }
+    /* DROPDOWN  */
+
+    .nav {
+        transition: transform 0.3s ease;
+    }
+
+    /* Rotate icon animation */
+    .rotate-icon {
+        transition: transform 0.3s ease;
+        display: inline-flex;
+    }
+
+    .rotate-180 {
+        transform: rotate(180deg);
+    }
+}
