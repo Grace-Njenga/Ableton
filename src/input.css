@@ -70,10 +70,6 @@ h6 {
 
 @import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @layer base {
     /* @font-face {
     font-family: ;
@@ -92,40 +88,3 @@ h6 {
     --color-background: #f3f3f3;
 }
 
-nav{
-  padding: 2rem;
-}
-
-/* LOGO CSS  */
-.logo{
-  position: relative;
-  top: 2%;
-  bottom: -2%;
-}
-
-/* TRY LIVE AND ACCOUNT CSS  */
-.special{
-  position: absolute;
-  right: 1%;
-}
-
-/* DROP DOWN ANIMATION CSS  */
-.dropdown-menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out, opacity 0.2s ease;
-  opacity: 0;
-}
-
-.dropdown-menu.visible {
-  max-height: 1000px;
-  opacity: 1;
-}
-
-.rotate-icon {
-  transition: transform 0.3s ease;
-}
-
-.rotate-icon.rotated {
-  transform: rotate(180deg);
-}
